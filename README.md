@@ -7,7 +7,7 @@ O programa consiste em um CRUD(Create,Read,Update and Delete) de uma lista de ta
 Na parte de "Adicionar" a tarefa foi construída uma função em JavaScript que é chamada quando apertado o botão "Adicionar":
 	      var tarefa = document.getElementById("tarefaid").value;  ---------- Cria-se uma variavel com o nome "tarefa" e atribui a ela o valor do campo texto do HTML. 
   	    var lista  = document.getElementById("lista").innerHTML; ---------- Cria-se uma variável com o nome "lista" e atribui a ela o valor da lista criada no HTML.
-  	    lista = lista+"<li>"+tarefa+" <input type='checkbox'>" +"</li>"; ---------- Na variável "lista" é adicionada ela mesma e a tarefa desejada com um checkbox.
+  	    lista = lista+ "li"+tarefa+" input type='checkbox'" +"/li"; ---------- Na variável "lista" é adicionada ela mesma e a tarefa desejada com um checkbox.
 	      document.getElementById("lista").innerHTML = lista; --------- O elemento HTML de id "lista" toma como valor a variável lista da função.
 
 Na parte de "Excluir" a tarefa foi construída uma função em JavaScript que é chamada quando apertado o botão "Excluir":
