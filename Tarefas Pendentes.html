@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Lista de Tarefas</title>
+<script type="text/javascript">
+
+function testCheck()
+{
+
+}
+ 
+function adicionar() 
+{
+  var tarefa = document.getElementById("tarefaid").value;
+  var lista  = document.getElementById("lista").innerHTML;
+  lista = lista+"<li>"+tarefa+" <input type='checkbox'>" +"</li>";
+  
+  document.getElementById("lista").innerHTML = lista;
+
+}
+
+function excluir()
+{
+	var list = document.getElementById("lista");
+	var ele = document.getElementById("excluirid").value;
+	list.removeChild(list.childNodes[ele]);
+}
+
+function alterar()
+{
+	var novo = document.getElementById("alterarname").value;
+	var textnode = document.createTextNode(novo);
+	var ele = document.getElementById("alterarid").value;
+	var item = document.getElementById("lista").childNodes[ele];
+	item.replaceChild(textnode,item.childNodes[0]);
+}
+
+</script>
+</head>
+<body>
+
+
+
+<input type="text" id = "tarefaid" placeholder="Digite a tarefa"/>
+
+
+
+<input type="button" value="Adicionar" onclick= "adicionar()"/>
+
+<br>
+<br>
+<br>
+<br>
+<input type ="text" id = "excluirid" placeholder="Digite o ID" />
+<input type="button" value="Excluir" onclick= "excluir()"/>
+<br>
+<br>
+<br>
+<br>
+<input type = "text" id = "alterarid" placeholder="Digite o ID" />
+<input type = "text" id = "alterarname" placeholder="Digite a nova Tarefa" />
+<input type = "button" value = "Alterar" onclick="alterar()">
+<br>
+<br>
+<br>
+<br>
+
+<ol id="lista">
+</ol>
+
+
+
+
+</body>
+</html>
+
+
+
